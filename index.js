@@ -37,7 +37,7 @@ module.exports = function(options) {
 
   var writeConfig = function (config, callback) {
     try {
-      var data = JSON.stringify(config, null, options.indent);
+      var data = JSON.stringify(config, null, options.indent) + "\n";
     } catch (err) {
       callback(err);
       return;
